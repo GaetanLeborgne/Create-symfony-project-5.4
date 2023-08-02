@@ -1,7 +1,31 @@
-## Specify the link to the .sh script on GitHub
+# Project Creation
 
-script_url="https://raw.githubusercontent.com/GaetanLeborgne/Create-symfony-project-5.4/main/create_project.sh"
+## Symfony project creation with composer
+```bash
+composer create-project symfony/skeleton:"^5.4" my_project_directory
+```
 
-## Download the create_project.sh script from GitHub and execute it directly
+## Moving files to the root
+```bash
+mv ./my_project_directory/* ./my_project_directory/.* .
+```
 
-curl -sSL "$script_url" | bash
+## Deleting the temporary directory
+```bash
+rmdir ./my_project_directory
+```
+
+## Installing Doctrine Annotations
+```bash
+composer require doctrine/annotations
+```
+
+## Installing the webapp
+```bash
+composer require webapp
+```
+
+## Installing CLI
+```bash
+wget https://get.symfony.com/cli/installer -O - | bash
+```
